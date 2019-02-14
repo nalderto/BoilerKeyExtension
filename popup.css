@@ -1,0 +1,42 @@
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px 30px 24px 30px 24px 24px;
+    grid-row-gap: 8px;
+    grid-column-gap: 8px;
+    grid-template-areas:
+"title title"
+"unamelabel unamelabel"
+"unameinput unameinput"
+"pinlabel pinlabel"
+"pininput pininput"
+"save reset";
+}
+
+#title {
+    grid-area: title;
+}
+
+#username_label {
+    grid-area: unamelabel;
+}
+
+#username {
+    grid-area: unameinput;
+}
+
+#pin_label {
+    grid-area: pinlabel;
+}
+
+#pin {
+    grid-area: pininput;
+}
+
+#save_button {
+    grid-area: save;
+}
+
+#reset_button {
+    grid-area: reset;
+}
