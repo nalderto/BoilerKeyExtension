@@ -82,11 +82,12 @@ async function askForInfo() {
     code + '?app_id=com.duosecurity.duomobile.app.DMApplication' +
     '&app_version=2.3.3&app_build_number=323206&full_disk_encryption=false&manufacturer=Google&model=Pixel&' +
     'platform=Android&jailbroken=false&version=6.0&language=EN&customer_protocol=1');
+
+    console.log(hotpSecret);
     
     hotpSecret = JSON.parse(hotpSecret);
     hotpSecret = hotpSecret.response["hotp_secret"];
 
-    console.log(hotpSecret);
     //If activation was successful, save the hotp-secret and reset the counter.
     if (hotpSecret) {
         set("hotpSecret", hotpSecret);
